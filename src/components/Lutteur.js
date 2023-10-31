@@ -1,7 +1,10 @@
 import React from 'react'
 
-export default function Lutteur({pseudo}) {
+export default function Lutteur({lutteur, onDelete}) {
   return (
-    <li>{pseudo} </li>
+    <div>
+    {lutteur.pseudo}&nbsp; 
+    <button onClick={() => onDelete(lutteur.id)}>X</button> 
+    </div>
   )
 }
